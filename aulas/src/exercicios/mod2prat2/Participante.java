@@ -1,4 +1,4 @@
-package exercicios;
+package exercicios.mod2prat2;
 
 public class Participante {
     private String RG;

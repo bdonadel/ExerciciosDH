@@ -1,7 +1,5 @@
-package exercicios;
+package exercicios.mod2prat2;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
