@@ -1,28 +1,28 @@
 package exercicios.mod2prat4;
 
 public class Produto {
-    private static String nome;
-    private static double preco;
+    private String nome;
+    private double preco;
 
     public Produto(String nome, double preco) {
         this.nome = nome;
         this.preco = preco;
     }
 
-    public static String getNome() {
+    public String getNome() {
         return nome;
     }
 
-    public static void setNome(String nome) {
-        Produto.nome = nome;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public static double getPreco() {
+    public double getPreco() {
         return preco;
     }
 
-    public static void setPreco(double preco) {
-        Produto.preco = preco;
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
 
     @Override

@@ -1,19 +1,19 @@
 package exercicios.mod2prat4;
 
 public class Pereciveis extends Produto {
-    private static int diasParaVencer;
+    private int diasParaVencer;
 
     public Pereciveis(String nome, double preco, int diasParaVencer) {
         super(nome, preco);
         this.diasParaVencer = diasParaVencer;
     }
 
-    public static int getDiasParaVencer() {
+    public int getDiasParaVencer() {
         return diasParaVencer;
     }
 
-    public static void setDiasParaVencer(int diasParaVencer) {
-        Pereciveis.diasParaVencer = diasParaVencer;
+    public void setDiasParaVencer(int diasParaVencer) {
+        this.diasParaVencer = diasParaVencer;
     }
 
     @Override

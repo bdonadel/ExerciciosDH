@@ -1,18 +1,18 @@
 package exercicios.mod2prat4;
 
 public class NaoPereciveis extends Produto {
-    public static String tipo;
+    private String tipo;
 
     public NaoPereciveis(String nome, double preco, String tipo) {
         super(nome, preco);
         this.tipo = tipo;
     }
 
-    public static String getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    public static void setTipo(String tipo) {
-        NaoPereciveis.tipo = tipo;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 }
