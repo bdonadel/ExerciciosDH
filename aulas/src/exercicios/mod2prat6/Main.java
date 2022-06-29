@@ -21,13 +21,21 @@ public class Main {
         Garagem garagem = new Garagem("1", listVeiculos);
 
         System.out.println("Veículos ordenados por preço:");
-        /*Collections.sort(listVeiculos, new ComparadorVeiculo());
+        /* Usando classe que seta o comparador
+        Collections.sort(listVeiculos, new ComparadorVeiculo());
         for (Veiculo v: listVeiculos){
             System.out.println(v.getModelo() + " R$" + v.getPreco());
         }*/
 
-        /*listVeiculos.stream().sorted((x,y) -> x.getPreco() >= y.getPreco() ? 0 : -1).forEach(
+        /* Versão stream em que o comparador é negativo ou não
+        listVeiculos.stream().sorted((x,y) -> x.getPreco() >= y.getPreco() ? 0 : -1).forEach(
                 v -> System.out.println(v.getModelo() + " R$" + v.getPreco())
+        );*/
+
+        /* Versão em que mudamos a ordem da lista original
+        garagem.getListVeiculos().sort((a, b) -> (int) (a.getPreco() - b.getPreco()));
+        garagem.getListVeiculos().forEach( v ->
+            System.out.println(v.getModelo() + " R$" + v.getPreco())
         );*/
 
         garagem.getListVeiculos().stream().sorted((a, b) -> (int)(a.getPreco() - b.getPreco())).forEach(
