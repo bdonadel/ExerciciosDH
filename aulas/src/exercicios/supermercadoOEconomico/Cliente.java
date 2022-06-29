@@ -36,4 +36,13 @@ public class Cliente {
     public void setSobrenome(String sobrenome) {
         this.sobrenome = sobrenome;
     }
+
+    @Override
+    public String toString() {
+        return "Cliente {" +
+                "ID='" + ID + '\'' +
+                ", nome='" + nome + '\'' +
+                ", sobrenome='" + sobrenome + '\'' +
+                '}';
+    }
 }
