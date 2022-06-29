@@ -20,12 +20,17 @@ public class Main {
         );
         Garagem garagem = new Garagem("1", listVeiculos);
 
+        System.out.println("Veículos ordenados por preço:");
         /*Collections.sort(listVeiculos, new ComparadorVeiculo());
         for (Veiculo v: listVeiculos){
             System.out.println(v.getModelo() + " R$" + v.getPreco());
         }*/
-        System.out.println("Veículos ordenados por preço:");
-        listVeiculos.stream().sorted((x,y) -> x.getPreco() >= y.getPreco() ? 0 : -1).forEach(
+
+        /*listVeiculos.stream().sorted((x,y) -> x.getPreco() >= y.getPreco() ? 0 : -1).forEach(
+                v -> System.out.println(v.getModelo() + " R$" + v.getPreco())
+        );*/
+
+        garagem.getListVeiculos().stream().sorted((a, b) -> (int)(a.getPreco() - b.getPreco())).forEach(
                 v -> System.out.println(v.getModelo() + " R$" + v.getPreco())
         );
 
